@@ -1,0 +1,25 @@
+<template>
+    <div class="card">
+        <lightning-card title="Simple Calculator">
+            <div class="input">
+                <lightning-input type="text" label="Enter a number" onchange={firstNumberHandler}></lightning-input>
+                <lightning-input type="text" label="Enter a number" onchange={secondNumberHandler}></lightning-input>
+            </div>
+            <lightning-button-group class="input">
+                <lightning-button icon-name="utility:add" onclick={additionHandler}></lightning-button>
+                <lightning-button icon-name="utility:dash" onclick={subtractionHandler}></lightning-button>
+                <lightning-button icon-name="utility:close" onclick={multiplicationHandler}></lightning-button>
+                <lightning-button icon-name="utility:percent" onclick={divisionHandler}></lightning-button>
+            </lightning-button-group>
+            <div class="input">
+                The result is: {result}
+            </div>
+            <div>
+                <p class="slds-p-around-medium" slot="thankyou">
+                    Thanks for using the Calculator
+                </p>
+                <!-- <slot name="thankyou"></slot> -->
+            </div>
+        </lightning-card>
+    </div>
+</template>
