@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Contact Birthday">
+        <lightning-combobox class name="progress" label="Select Month" value={value} placeholder="Select Progress" options={options}
+            onchange={handleChange}></lightning-combobox>
+            <br>
+        <template if:true={contacts.data}>
+            <template for:each={contacts.data} for:item = "contact">
+                <div class = "slds-box slds-var-p-bottom_xx-large" key={contact.Id}>
+                    <p><strong>First Name: {contact.FirstName}</strong></p>
+                    <p><strong>Last Name: {contact.LastName}</strong></p>
+                    <p><strong>Email: {contact.Email}</strong></p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
