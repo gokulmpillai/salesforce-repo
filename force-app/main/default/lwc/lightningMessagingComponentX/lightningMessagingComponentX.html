@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title = "LWC Component X">
+        <div class="slds-m-around_medium">
+            Message Recieved <strong>{messageFromA}</strong>
+        </div>
+        <div class="slds-m-around_medium">
+        <lightning-button label = "Unsubscribe" onclick={unsubscribeToMessageChannel} ></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button label = "Subscribe" variant = "brand" onclick={subscribeToMessageChannel} ></lightning-button>
+            </div>
+        </lightning-card>
+</template>
