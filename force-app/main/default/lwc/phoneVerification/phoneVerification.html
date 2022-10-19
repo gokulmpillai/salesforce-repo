@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Phone Verification">
+        <lightning-input class="slds-p-around_medium" type="text" label="Enter the phone number with code to verify" onchange={phoneNumberHandler} required></lightning-input>
+        <lightning-button class="slds-p-around_medium" label="Search Phone Details" variant="brand" onclick={phoneDetailsHandler}></lightning-button>
+            <template if:true={details}>
+                <!-- <div class="slds-m-around_medium">Phone Number: {details.phone}</div>
+                <div class="slds-m-around_medium">Status: {details.status}</div>
+                <div class="slds-m-around_medium">Country: {details.country}</div>
+                <div class="slds-m-around_medium">Carrier: {details.carrier}</div> -->
+                <ul class="slds-p-around_medium slds-has-dividers_around-space">
+                    <li class="slds-item">Phone Number: {details.phone}</li>
+                    <li class="slds-item">Country Code: {details.countryCode}</li>
+                    <li class="slds-item">International Number: {details.internationalNumber}</li>
+                    <li class="slds-item">Region: {details.region}</li> 
+                    <li class="slds-item">Country: {details.country}</li>
+                    <li class="slds-item">Carrier: {details.carrier}</li>
+                    <li class="slds-item">Type: {details.type}</li>
+                    <!-- <li class="slds-item">Valid: {details.valid}</li> -->
+                    </ul>
+            </template>
+            <template if:true={invalid}>
+                <h1 class="slds-p-around_medium">Please enter a valid number</h1> 
+            </template>
+    </lightning-card>
+</template>
